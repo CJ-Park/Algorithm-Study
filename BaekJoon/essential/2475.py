@@ -1,3 +1,5 @@
+# 1트
+
 numbers = list(map(int, input().split()))
 total = 0
 
