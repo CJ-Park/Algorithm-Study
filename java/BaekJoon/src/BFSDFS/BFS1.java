@@ -56,13 +56,16 @@ public class BFS1 {
         if (maze[x + 1][y] == 1) {
             maze[x + 1][y] = maze[x][y] + 1;
             q.offer(new Point(x + 1, y));
-        } else if (maze[x - 1][y] == 1) {
-            maze[x - 1][y] = maze[x][y] + 1;
-            q.offer(new Point(x - 1, y));
-        } else if (maze[x][y + 1] == 1) {
+        }
+        if (maze[x][y + 1] == 1) {
             maze[x][y + 1] = maze[x][y] + 1;
             q.offer(new Point(x, y + 1));
-        } else if (maze[x][y - 1] == 1) {
+        }
+        if (maze[x - 1][y] == 1) {
+            maze[x - 1][y] = maze[x][y] + 1;
+            q.offer(new Point(x - 1, y));
+        }
+        if (maze[x][y - 1] == 1) {
             maze[x][y - 1] = maze[x][y] + 1;
             q.offer(new Point(x, y - 1));
         }
