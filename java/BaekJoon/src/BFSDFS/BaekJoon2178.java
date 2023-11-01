@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 // 미로의 최단 경로 검색
-public class BFS1 {
+public class BaekJoon2178 {
     int N, M;
     int[][] maze;
     Queue<Point> q;
