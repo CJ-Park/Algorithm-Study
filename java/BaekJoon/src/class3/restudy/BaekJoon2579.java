@@ -29,15 +29,23 @@ public class BaekJoon2579 {
             dp[2] = scores[1] + scores[2];
         }
 
-        System.out.println(goUp(n));
+        // 바텀업 방식
+        for (int i = 3; i <= n; i++) {
+            dp[i] = Math.max(dp[i - 3] + scores[i - 1], dp[i - 2]) + scores[i];
+        }
+
+        System.out.println(dp[n]);
+
+//        System.out.println(goUp(n));
     }
 
-    public int goUp(int idx) {
-        if (idx >= 3) {
-            if (dp[idx] == 0) { // 해당 idx 계단 방문 합계 안나왔으면
-                dp[idx] = Math.max(goUp(idx - 2), goUp(idx - 3) + scores[idx - 1]) + scores[idx];
-            }
-        }
-        return dp[idx];
-    }
+    // 탑다운 방식
+//    public int goUp(int idx) {
+//        if (idx >= 3) {
+//            if (dp[idx] == 0) { // 해당 idx 계단 방문 합계 안나왔으면
+//                dp[idx] = Math.max(goUp(idx - 2), goUp(idx - 3) + scores[idx - 1]) + scores[idx];
+//            }
+//        }
+//        return dp[idx];
+//    }
 }
