@@ -8,6 +8,9 @@ import java.util.*;
 // 이중 우선순위 큐 - 우선순위 큐 사용
 // PriorityQueue 의 remove 는 시간복잡도 O(n) -> 시간 초과 발생
 // Map 사용을 통해 삭제 로직 별도 구성 Map 의 get, remove 는 시간복잡도 O(1)
+
+// TreeMap 이용하면 훨씬 간단하게 해결 가능! => 이진 트리를 기반으로 오름차순 데이터 저장
+// TreeMap 의 firstKey(최소값), lastKey(최대값) 사용
 public class BaekJoon7662 {
     int T;
     PriorityQueue<Integer> naturalPq = new PriorityQueue<>(); // 최소값부터 빠짐
