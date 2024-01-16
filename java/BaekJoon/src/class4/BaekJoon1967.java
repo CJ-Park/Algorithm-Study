@@ -57,14 +57,13 @@ public class BaekJoon1967 {
         }
     }
 
-}
+    private static class Node {
+        int num;
+        int val;
 
-class Node {
-    int num;
-    int val;
-
-    public Node(int num, int val) {
-        this.num = num;
-        this.val = val;
+        public Node(int num, int val) {
+            this.num = num;
+            this.val = val;
+        }
     }
 }
