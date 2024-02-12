@@ -1,4 +1,4 @@
-package class4.restudy;
+package class5.restudy;
 
 import java.io.BufferedReader;
 import java.io.IOException;
