@@ -1,4 +1,4 @@
-package Graph.DFS.level2;
+package Graph.level2;
 
 public class 타겟넘버 {
     int count = 0;
