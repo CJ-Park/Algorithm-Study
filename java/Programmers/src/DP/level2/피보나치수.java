@@ -1,6 +1,6 @@
 package DP.level2;
 
-// 반복문 사용
+// 반복문 + 메모이제이션
 public class 피보나치수 {
     static int[] fibo = new int[100001];
     static int NUM = 1234567;
