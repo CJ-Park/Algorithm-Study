@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-// 숫자 야구
+/*
+숫자 야구 - 실버3
+ */
 public class BaekJoon2503 {
     int T;
     List<Baseball> games = new ArrayList<>();
