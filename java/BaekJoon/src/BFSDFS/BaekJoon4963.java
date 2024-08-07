@@ -33,9 +33,9 @@ public class BaekJoon4963 {
 
             for (int i = 1; i <= h; i++) {
                 for (int j = 1; j <= w; j++) {
-                    if (map[i][j] == 1) {
+                    if (map[i][j] == 1) { // 땅인 지점 찾으면 탐색 시작
                         bfs(i, j);
-                        count++;
+                        count++; // 섬 개수 증가
                     }
                 }
             }
@@ -45,6 +45,8 @@ public class BaekJoon4963 {
 
         System.out.println(sb);
     }
+
+    // 너비 우선 탐색
     private void bfs(int x, int y) {
         Queue<Point> q = new ArrayDeque<>();
         q.add(new Point(x, y));
@@ -52,12 +54,14 @@ public class BaekJoon4963 {
         while (!q.isEmpty()) {
             Point p = q.poll();
 
-            if (p.x < 1 || p.y < 1 || p.x > h || p.y > w || map[p.x][p.y] == 0) {
+            if (p.x < 1 || p.y < 1 || p.x > h || p.y > w || map[p.x][p.y] == 0) { // 범위 이탈 시 패스
                 continue;
             }
 
+            // 땅인 지점 바다로 수정 => 섬 전부 찾으면 map 은 전부 바다가 됨
             map[p.x][p.y] = 0;
 
+            // 인접한 위치 큐에 삽입
             q.add(new Point(p.x + 1, p.y));
             q.add(new Point(p.x + 1, p.y + 1));
             q.add(new Point(p.x + 1, p.y - 1));
