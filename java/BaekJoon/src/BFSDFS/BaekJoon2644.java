@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
+/*
+촌수 계산 - 실버2
+ */
 public class BaekJoon2644 {
     ArrayList<Integer>[] graph;
     boolean[] visited;
