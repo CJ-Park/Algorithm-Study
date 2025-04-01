@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 // 소금 폭탄
 public class BaekJoon13223 {
 
-    public static void main(String[] args) throws IOException {
+    public void solution() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int now = getSeconds(br.readLine());
         int end = getSeconds(br.readLine());
@@ -23,7 +23,7 @@ public class BaekJoon13223 {
         System.out.println(result);
     }
 
-    private static String getTime(int seconds) {
+    private String getTime(int seconds) {
         int hour = seconds / 3600;
         seconds = seconds % 3600;
 
@@ -33,7 +33,7 @@ public class BaekJoon13223 {
         return String.format("%02d:%02d:%02d", hour, minute, seconds);
     }
 
-    private static int getSeconds(String input) {
+    private int getSeconds(String input) {
         String[] arr = input.split(":");
         int time = 0;
 
